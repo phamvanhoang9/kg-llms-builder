@@ -6,6 +6,7 @@ from pyvis.network import Network
 from dotenv import load_dotenv
 import os
 import asyncio
+import json
 
 
 # Load the .env file
@@ -13,7 +14,13 @@ load_dotenv()
 # Get API key from environment variable
 api_key = os.getenv("OPENAI_API_KEY")
 
-llm = ChatOpenAI(temperature=0, model_name="gpt-4o")
+
+# Load LLM configuration from config.json
+with open("config.json", "r") as f: 
+    config = json.load(f)
+
+llm = ChatOpenAI(temperature=config["llm"]["temperature"], model_name=config["llm"]["model_name"])
+
 
 graph_transformer = LLMGraphTransformer(llm=llm)
 

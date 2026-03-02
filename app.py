@@ -3,6 +3,7 @@ import streamlit as st
 import streamlit.components.v1 as components  # For embedding custom HTML
 from generate_knowledge_graph import generate_knowledge_graph
 
+
 # Set up Streamlit page configuration
 st.set_page_config(
     page_icon=None, 
@@ -12,7 +13,7 @@ st.set_page_config(
 )
 
 # Set the title of the app
-st.title("Knowledge Graph From Text")
+st.title("Knowledge Graph Builder")
 
 # Sidebar section for user input method
 st.sidebar.title("Input document")
