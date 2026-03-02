@@ -1,7 +1,7 @@
 # Knowledge Graph Generator
 
 A Streamlit application that extract graph data (entities and relationships) from text input using LangChain and OpenAI's GPT models, and generates interactive graphs.
-[Law Knowledge Graph](images/law_knowledge_graph_example.png)
+![Law Knowledge Graph](images/law_knowledge_graph_example.png)
 
 ## Features
 
